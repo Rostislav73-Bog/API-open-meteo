@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск погоды</title>
+</head>
+<body>
+    <h1>Введите название города и выберите дату для получения данных о погоде</h1>
+    <form action="/weather" method="get">
+        <input type="text" name="city" placeholder="Название города" required>
+        <input type="date" name="date" required>
+        <button type="submit">Получить погоду</button>
+    </form>
+</body>
+</html>

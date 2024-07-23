@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Погода в {{ city }} на {{ date }}</title>
+</head>
+<body>
+    <h1>Погода в {{ city }} на {{ date }}</h1>
+    <p>Координаты: {{ latitude }}, {{ longitude }}</p>
+    <h2>Почасовая температура:</h2>
+    <ul>
+        {% for time, temp in weather %}
+            <li>{{ time.strftime('%H:%M') }}: {{ temp }}°C</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Назад</a>
+</body>
+</html>
